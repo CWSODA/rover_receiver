@@ -23,8 +23,8 @@ Discard points after cooldown, dimming them over delta
 #define PI 3.1415926535897932384f
 
 // drawer settings
-constexpr int DRAWER_WIDTH = 600;
-constexpr int DRAWER_HEIGHT = 600;
+constexpr int DRAWER_WIDTH = 550;
+constexpr int DRAWER_HEIGHT = 550;
 constexpr float LIFETIME_SECONDS = 1.0f;
 constexpr size_t GRID_CIRCLE_DIVS = 64;
 
@@ -68,14 +68,17 @@ class LidarDrawer {
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
     }
 
-    GLuint get_texture() { return ld_color_tex; }
+    GLuint get_texture() const { return ld_color_tex; }
 
     // adds points to be rendered, distance in m, angle in degrees
     void add_point(uint8_t strength, float distance, float angle,
                    float lifetime = LIFETIME_SECONDS) {
+        ++this->sample_count;
         if (strength < strength_threshold) return;  // ignore weak signals
         points.emplace_back(LidarPoint(strength, distance, angle, lifetime));
     }
+
+    uint64_t get_sample_count() const { return sample_count; }
 
     void gen_test_points() {
         // generate spiral data
@@ -104,4 +107,7 @@ class LidarDrawer {
     unsigned int grid_VAO, grid_VBO;
     Shader grid_shader =
         Shader("src/shaders/vert/circle.vert", "src/shaders/frag/colored.frag");
+
+    // testing stuff
+    u_int64_t sample_count = 0;  // lifetime sample count
 };

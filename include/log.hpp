@@ -2,7 +2,7 @@
 
 #include <string>
 
-enum class LogOption { Incomplete, Plain, Warning, L };
+enum class LogOption { Incomplete, Plain, Warning, L, T };
 
 class GUILog {
    public:

@@ -9,7 +9,7 @@
 #define TODO exit(-1);
 
 // Basically a state machine
-enum class CmdType { None, Awaiting, L };
+enum class CmdType { None, Awaiting, L, T };
 class Cmd {
    public:
     CmdType type = CmdType::None;
@@ -20,6 +20,9 @@ class Cmd {
         switch (type) {
             case (CmdType::L):
                 return LogOption::L;
+                break;
+            case (CmdType::T):
+                return LogOption::T;
                 break;
             default:
                 return LogOption::Plain;
@@ -34,6 +37,10 @@ class Cmd {
             case ('L'):
                 type = CmdType::L;
                 break;
+            case ('T'): {  // used for timing
+                type = CmdType::T;
+                break;
+            }
             default:
                 return false;
         }
@@ -78,6 +85,12 @@ void parse(GUIData& gui_data) {
                 curr_cmd.type = CmdType::None;
                 gui_data.gui_log.append_log(
                     rx_buffer.substr(start, i - start + 1), LogOption::Warning);
+                start = i + 1;
+            }
+            if (curr_cmd.type == CmdType::T) {
+                gui_data.frame_count++;
+                gui_data.gui_log.append_log("", LogOption::T);
+                curr_cmd.type = CmdType::None;
                 start = i + 1;
             }
             continue;

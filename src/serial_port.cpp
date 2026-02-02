@@ -3,16 +3,21 @@
 #include <boost/asio.hpp>
 using namespace boost;
 
+// terminal config stuff
 #include <termios.h>
+#ifdef __APPLE__  // apple specific ioctl
+#include <sys/ioctl.h>
+#include <IOKit/serial/ioss.h>
+#endif
 
 #include <string>
 #include <iostream>
 #include <mutex>
 
 // #define DEBUG_UART
-// #define DEBUG_UART_BYTES
+// #define DEBUG_UART_HEX
 
-constexpr uint BAUD_RATE = 115200;
+constexpr uint UART_BAUD_RATE = 115200 * 8;
 
 void SerialPort::config_terminal() {
     // file descriptor, used to configure port
@@ -21,10 +26,16 @@ void SerialPort::config_terminal() {
 
     // make port read raw bytes
     int t = tcgetattr(fd, &tty);
-    tty.c_iflag &= ~(INLCR | IGNCR | ICRNL);
-    tty.c_oflag &= ~(ONLCR | OCRNL | ONOCR | ONLRET);
     cfmakeraw(&tty);
     tcsetattr(fd, TCSANOW, &tty);
+
+// set baudrate (ONLY WORKS FOR MACOS)
+#ifdef __APPLE__
+    speed_t baudrate = UART_BAUD_RATE;
+    ioctl(fd, IOSSIOSPEED, &baudrate);
+#else
+    CRASHOUT !!!USE A COMPATIBLE LIBRARY TO SET BAUDRATE
+#endif
 }
 
 SerialPort::SerialPort(const std::string& port_name) {
@@ -36,7 +47,8 @@ SerialPort::SerialPort(const std::string& port_name) {
     config_terminal();
 
     system::error_code ec;
-    serial_port_.set_option(asio::serial_port_base::baud_rate(BAUD_RATE), ec);
+    // serial_port_.set_option(asio::serial_port_base::baud_rate(BAUD_RATE),
+    // ec);
     serial_port_.set_option(asio::serial_port_base::character_size(8), ec);
     serial_port_.set_option(asio::serial_port_base::stop_bits(
                                 asio::serial_port_base::stop_bits::one),
@@ -70,7 +82,7 @@ void SerialPort::open(const std::string& path) {
     config_terminal();
 
     system::error_code ec;
-    new_port.set_option(asio::serial_port_base::baud_rate(BAUD_RATE), ec);
+    // new_port.set_option(asio::serial_port_base::baud_rate(BAUD_RATE), ec);
     new_port.set_option(asio::serial_port_base::character_size(8), ec);
     new_port.set_option(asio::serial_port_base::stop_bits(
                             asio::serial_port_base::stop_bits::one),
@@ -157,7 +169,7 @@ void SerialPort::async_read() {
                 std::cout.write(input_buffer_.c_str(), bytes_read);
                 std::cout.flush();
 #endif
-#ifdef DEBUG_UART_BYTES
+#ifdef DEBUG_UART_HEX
                 for (unsigned char c : input_buffer_.substr(0, bytes_read)) {
                     printf("(%02X)\n", c);
                 }

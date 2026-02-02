@@ -131,6 +131,33 @@ void run_gui() {
                 ImGui::SliderInt("Signal Strength Threshold",
                                  &gui_data.lidar_drawer.strength_threshold, 0,
                                  255, "%d", ImGuiSliderFlags_AlwaysClamp);
+
+                static float data_cd = 0.0f;
+                static float pps = 0.0f;
+                static float fps = 0.0f;
+                static uint64_t last_sample_count = 0;
+                static uint64_t last_frame_count = 0;
+                data_cd += gui_data.delta_time;
+                // calc test data, time averaged by 1 sec
+                if (data_cd >= 1.0f) {
+                    uint64_t cur_sample_count =
+                        gui_data.lidar_drawer.get_sample_count();
+                    pps = static_cast<float>(cur_sample_count -
+                                             last_sample_count) /
+                          data_cd;
+                    last_sample_count = cur_sample_count;
+
+                    uint64_t cur_frame_count = gui_data.frame_count;
+                    fps =
+                        static_cast<float>(cur_frame_count - last_frame_count) /
+                        data_cd;
+                    last_frame_count = cur_frame_count;
+
+                    data_cd = 0.0f;  // reset cooldown
+                }
+
+                ImGui::Text("Points per sec: %f", pps);
+                ImGui::Text("Frames per sec: %f", fps);
                 port_select(gui_data);
 
                 ImGui::EndTabItem();

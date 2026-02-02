@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/admin/rover/rover_wifi/rover_receiver/build-release/cmake_install.cmake",
+		"/Users/admin/rover/rover_wifi/rover_receiver/build-release/imgui/cmake_install.cmake",
+		"/Users/admin/rover/rover_wifi/rover_receiver/build-release/implot/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

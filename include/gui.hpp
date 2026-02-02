@@ -40,6 +40,9 @@ struct GUIData {
     LidarDrawer lidar_drawer;
     float drawer_zoom = 8.5f;
 
+    // testing stuff
+    uint64_t frame_count = 0;
+
     GLFWwindow* window;
 };
 
