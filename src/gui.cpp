@@ -26,7 +26,11 @@
 #include "log.hpp"
 #include "parser.hpp"
 
+#include "lidar.hpp"
+
 #define TODO throw std::invalid_argument("TODO!");
+
+#define DIRECT_CONNECTION true
 
 const std::string default_port_name = "/dev/tty.usbserial-FTU7C2WR";
 
@@ -61,6 +65,9 @@ void run_gui() {
     // Loop values
     GUIData gui_data;
     Parser parser;
+#if DIRECT_CONNECTION
+    LidarParser lidar_parser;
+#endif
     gui_data.window = window;
     try {
         gui_data.sp.open(default_port_name);
@@ -98,7 +105,15 @@ void run_gui() {
 
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
+
+#ifdef DIRECT_CONNECTION
+        for (char byte : gui_data.sp.pull_buffer()) {
+            // gui_data.gui_log.log_byte_hex(byte);
+            lidar_parser.parse_byte(byte, gui_data.lidar_drawer);
+        }
+#else
         parser.parse(gui_data);
+#endif
 
         // render the lidar points
         gui_data.lidar_drawer.render(gui_data);

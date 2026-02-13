@@ -31,6 +31,7 @@ add_executable(${TARGET_NAME}
     src/parser.cpp
     src/serial_port.cpp
     src/log.cpp
+    src/lidar.cpp
 )
 
 # adds run function

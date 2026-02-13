@@ -8,6 +8,7 @@ class GUILog {
    public:
     const char* get_printable_pointer() { return printable.c_str(); }
     void append_log(const std::string& other, LogOption op);
+    void log_byte_hex(uint8_t byte);
 
     void log_plain(std::string& buf, size_t start, size_t end) {
         if (start <= end) {

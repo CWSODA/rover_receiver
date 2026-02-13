@@ -7,6 +7,9 @@ using namespace boost;
 #include <mutex>
 #include <thread>
 
+// constexpr uint UART_BAUDRATE = 115200 * 8;
+constexpr unsigned long UART_BAUDRATE = 115200;
+
 class SerialPort {
    public:
     // disallow copy or assign
@@ -14,7 +17,7 @@ class SerialPort {
     SerialPort(const SerialPort&) = delete;
     SerialPort& operator=(const SerialPort&) = delete;
 
-    void config_terminal();
+    void config_terminal(unsigned long baudrate = UART_BAUDRATE);
 
     SerialPort(const std::string& port_name);
 

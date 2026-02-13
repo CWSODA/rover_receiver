@@ -3,6 +3,13 @@
 #include <iostream>
 #include <fstream>
 
+void GUILog::log_byte_hex(uint8_t byte) {
+    char buf[16];
+    snprintf(buf, 16, "(%02X)", byte);
+    printable += buf;
+    printable += "\n";
+}
+
 void GUILog::append_log(const std::string& other, LogOption op) {
     // raw.append(other);
     // printf("log: %s\n", other.c_str());

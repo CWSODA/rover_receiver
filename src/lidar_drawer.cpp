@@ -84,8 +84,11 @@ void LidarDrawer::render(GUIData& gui_data) {
 
     // render points
     for (auto& point : points) {
+        glm::vec3 original_color =
+            glm::mix(glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f),
+                     point.point_angle / 360.0f);
         glm::vec3 point_color =
-            glm::mix(clear_color, glm::vec3(1.0f, 0.0f, 0.0f), point.lifetime);
+            glm::mix(clear_color, original_color, point.lifetime);
         dot_shader.set_vec2("a_pos", point.pos);
         dot_shader.set_vec3("a_color", point_color);
         glDrawArrays(GL_POINTS, 0, 1);

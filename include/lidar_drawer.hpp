@@ -20,7 +20,7 @@ Discard points after cooldown, dimming them over delta
 
 #include "shader.hpp"
 
-#define PI 3.1415926535897932384f
+constexpr float PI = 3.1415926535897932384f;
 
 // drawer settings
 constexpr int DRAWER_WIDTH = 550;
@@ -33,6 +33,7 @@ struct GUIData;
 struct LidarPoint {
     uint8_t strength;
     glm::vec2 pos;
+    float point_angle;
 
     // dictates point opacity and deletion
     float lifetime;
@@ -41,9 +42,11 @@ struct LidarPoint {
     // angle in degrees
     LidarPoint(uint8_t strength, float distance, float angle, float lifetime) {
         this->strength = strength;
-        float angle_in_rad = PI * angle / 180.0f;
+        float angle_in_rad = angle * PI / 180.0f;
         pos.x = cosf(angle_in_rad) * distance;
         pos.y = sinf(angle_in_rad) * distance;
+        // normalize angle
+        point_angle = angle - 360.0f * (int)(angle / 360.0f);
 
         this->lifetime = lifetime;
     }
@@ -52,7 +55,8 @@ struct LidarPoint {
 class LidarDrawer {
    public:
     int strength_threshold = 0;  // must be within one byte
-    bool is_snapshot = false;    // set true to disable decay and intake
+    float distance_threshold = 12.0f;
+    bool is_snapshot = false;  // set true to disable decay and intake
     LidarDrawer();
 
     // render loop
@@ -77,6 +81,7 @@ class LidarDrawer {
         ++this->sample_count;
         if (is_snapshot) return;
         if (strength < strength_threshold) return;  // ignore weak signals
+        if (distance > distance_threshold) return;  // ignore invalid dist
         points.emplace_back(LidarPoint(strength, distance, angle, lifetime));
     }
 

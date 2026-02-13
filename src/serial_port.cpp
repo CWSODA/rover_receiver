@@ -17,9 +17,7 @@ using namespace boost;
 // #define DEBUG_UART
 // #define DEBUG_UART_HEX
 
-constexpr uint UART_BAUD_RATE = 115200 * 8;
-
-void SerialPort::config_terminal() {
+void SerialPort::config_terminal(unsigned long baudrate) {
     // file descriptor, used to configure port
     int fd = serial_port_.native_handle();
     struct termios tty;
@@ -31,8 +29,8 @@ void SerialPort::config_terminal() {
 
 // set baudrate (ONLY WORKS FOR MACOS)
 #ifdef __APPLE__
-    speed_t baudrate = UART_BAUD_RATE;
-    ioctl(fd, IOSSIOSPEED, &baudrate);
+    speed_t baudrate_speed = baudrate;
+    ioctl(fd, IOSSIOSPEED, &baudrate_speed);
 #else
     CRASHOUT !!!USE A COMPATIBLE LIBRARY TO SET BAUDRATE
 #endif
