@@ -60,6 +60,7 @@ void run_gui() {
 
     // Loop values
     GUIData gui_data;
+    Parser parser;
     gui_data.window = window;
     try {
         gui_data.sp.open(default_port_name);
@@ -97,7 +98,7 @@ void run_gui() {
 
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        parse(gui_data);
+        parser.parse(gui_data);
 
         // render the lidar points
         gui_data.lidar_drawer.render(gui_data);
@@ -132,13 +133,14 @@ void run_gui() {
                                  &gui_data.lidar_drawer.strength_threshold, 0,
                                  255, "%d", ImGuiSliderFlags_AlwaysClamp);
 
+                // calculate test data, time averaged by 1 sec
+                // points per second and frames per second
                 static float data_cd = 0.0f;
                 static float pps = 0.0f;
                 static float fps = 0.0f;
                 static uint64_t last_sample_count = 0;
                 static uint64_t last_frame_count = 0;
                 data_cd += gui_data.delta_time;
-                // calc test data, time averaged by 1 sec
                 if (data_cd >= 1.0f) {
                     uint64_t cur_sample_count =
                         gui_data.lidar_drawer.get_sample_count();
@@ -156,8 +158,14 @@ void run_gui() {
                     data_cd = 0.0f;  // reset cooldown
                 }
 
+                // DEBUG RATES
                 ImGui::Text("Points per sec: %f", pps);
+                float fps_offset = ImGui::GetItemRectSize().x + 100;
+                ImGui::SameLine(fps_offset);
                 ImGui::Text("Frames per sec: %f", fps);
+
+                ImGui::Checkbox("Snapshot", &gui_data.lidar_drawer.is_snapshot);
+
                 port_select(gui_data);
 
                 ImGui::EndTabItem();
@@ -186,6 +194,11 @@ void run_gui() {
                 }
                 ImGui::SameLine();
                 ImGui::Checkbox("Auto-scroll", &auto_scroll);
+
+                ImGui::SameLine();
+                if (ImGui::Button("Clear RX Buffer")) {
+                    parser.clear_rx_buffer();
+                }
 
                 ImGui::EndTabItem();
             }

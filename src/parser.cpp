@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 
+#include "parser.hpp"
 #include "serial_port.hpp"
 #include "log.hpp"
 #include "gui.hpp"
@@ -48,8 +49,7 @@ class Cmd {
     }
 };
 
-void parse(GUIData& gui_data) {
-    static std::string rx_buffer;
+void Parser::parse(GUIData& gui_data) {
     std::string incoming_data = gui_data.sp.pull_buffer();
     rx_buffer += incoming_data;
     // rx_buffer = "$L3....ewrf";

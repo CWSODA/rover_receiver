@@ -29,7 +29,7 @@ void GUILog::append_log(const std::string& other, LogOption op) {
             printable += '\n';
         } break;
         case LogOption::T: {
-            printable += "$T\n";
+            // printable += "$T\n";
             break;
         }
         case LogOption::L: {

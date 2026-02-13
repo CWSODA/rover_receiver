@@ -56,8 +56,6 @@ build CMakeFiles/glad.dir/src/third_party/glad.c.o: C_COMPILER__glad_unscanned_R
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/rover_receiver -I/Users/admin/rover/rover_wifi/rover_receiver/PRIVATE -I/Users/admin/rover/rover_wifi/rover_receiver/include
   OBJECT_DIR = CMakeFiles/glad.dir
   OBJECT_FILE_DIR = CMakeFiles/glad.dir/src/third_party
-  TARGET_COMPILE_PDB = CMakeFiles/glad.dir/glad.pdb
-  TARGET_PDB = libglad.pdb
 
 
 # =============================================================================
@@ -74,9 +72,8 @@ build libglad.a: C_STATIC_LIBRARY_LINKER__glad_Release CMakeFiles/glad.dir/src/t
   OBJECT_DIR = CMakeFiles/glad.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/glad.dir/glad.pdb
   TARGET_FILE = libglad.a
-  TARGET_PDB = libglad.pdb
+  TARGET_PDB = glad.a.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target rover_receiver
@@ -94,8 +91,6 @@ build CMakeFiles/rover_receiver.dir/src/main.cpp.o: CXX_COMPILER__rover_receiver
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/rover_receiver -I/Users/admin/rover/rover_wifi/rover_receiver/PRIVATE -I/Users/admin/rover/rover_wifi/rover_receiver/include -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/Users/admin/rover/rover_wifi/rover_receiver/implot -I/Users/admin/rover/rover_wifi/rover_receiver/implot/../imgui -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/rover_receiver.dir
   OBJECT_FILE_DIR = CMakeFiles/rover_receiver.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/rover_receiver.dir/
-  TARGET_PDB = rover_receiver.pdb
 
 build CMakeFiles/rover_receiver.dir/src/gui.cpp.o: CXX_COMPILER__rover_receiver_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/src/gui.cpp || cmake_object_order_depends_target_rover_receiver
   CONFIG = Release
@@ -104,8 +99,6 @@ build CMakeFiles/rover_receiver.dir/src/gui.cpp.o: CXX_COMPILER__rover_receiver_
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/rover_receiver -I/Users/admin/rover/rover_wifi/rover_receiver/PRIVATE -I/Users/admin/rover/rover_wifi/rover_receiver/include -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/Users/admin/rover/rover_wifi/rover_receiver/implot -I/Users/admin/rover/rover_wifi/rover_receiver/implot/../imgui -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/rover_receiver.dir
   OBJECT_FILE_DIR = CMakeFiles/rover_receiver.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/rover_receiver.dir/
-  TARGET_PDB = rover_receiver.pdb
 
 build CMakeFiles/rover_receiver.dir/src/lidar_drawer.cpp.o: CXX_COMPILER__rover_receiver_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/src/lidar_drawer.cpp || cmake_object_order_depends_target_rover_receiver
   CONFIG = Release
@@ -114,8 +107,6 @@ build CMakeFiles/rover_receiver.dir/src/lidar_drawer.cpp.o: CXX_COMPILER__rover_
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/rover_receiver -I/Users/admin/rover/rover_wifi/rover_receiver/PRIVATE -I/Users/admin/rover/rover_wifi/rover_receiver/include -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/Users/admin/rover/rover_wifi/rover_receiver/implot -I/Users/admin/rover/rover_wifi/rover_receiver/implot/../imgui -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/rover_receiver.dir
   OBJECT_FILE_DIR = CMakeFiles/rover_receiver.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/rover_receiver.dir/
-  TARGET_PDB = rover_receiver.pdb
 
 build CMakeFiles/rover_receiver.dir/src/parser.cpp.o: CXX_COMPILER__rover_receiver_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/src/parser.cpp || cmake_object_order_depends_target_rover_receiver
   CONFIG = Release
@@ -124,8 +115,6 @@ build CMakeFiles/rover_receiver.dir/src/parser.cpp.o: CXX_COMPILER__rover_receiv
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/rover_receiver -I/Users/admin/rover/rover_wifi/rover_receiver/PRIVATE -I/Users/admin/rover/rover_wifi/rover_receiver/include -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/Users/admin/rover/rover_wifi/rover_receiver/implot -I/Users/admin/rover/rover_wifi/rover_receiver/implot/../imgui -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/rover_receiver.dir
   OBJECT_FILE_DIR = CMakeFiles/rover_receiver.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/rover_receiver.dir/
-  TARGET_PDB = rover_receiver.pdb
 
 build CMakeFiles/rover_receiver.dir/src/serial_port.cpp.o: CXX_COMPILER__rover_receiver_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/src/serial_port.cpp || cmake_object_order_depends_target_rover_receiver
   CONFIG = Release
@@ -134,8 +123,6 @@ build CMakeFiles/rover_receiver.dir/src/serial_port.cpp.o: CXX_COMPILER__rover_r
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/rover_receiver -I/Users/admin/rover/rover_wifi/rover_receiver/PRIVATE -I/Users/admin/rover/rover_wifi/rover_receiver/include -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/Users/admin/rover/rover_wifi/rover_receiver/implot -I/Users/admin/rover/rover_wifi/rover_receiver/implot/../imgui -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/rover_receiver.dir
   OBJECT_FILE_DIR = CMakeFiles/rover_receiver.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/rover_receiver.dir/
-  TARGET_PDB = rover_receiver.pdb
 
 build CMakeFiles/rover_receiver.dir/src/log.cpp.o: CXX_COMPILER__rover_receiver_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/src/log.cpp || cmake_object_order_depends_target_rover_receiver
   CONFIG = Release
@@ -144,8 +131,6 @@ build CMakeFiles/rover_receiver.dir/src/log.cpp.o: CXX_COMPILER__rover_receiver_
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/rover_receiver -I/Users/admin/rover/rover_wifi/rover_receiver/PRIVATE -I/Users/admin/rover/rover_wifi/rover_receiver/include -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/Users/admin/rover/rover_wifi/rover_receiver/implot -I/Users/admin/rover/rover_wifi/rover_receiver/implot/../imgui -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/rover_receiver.dir
   OBJECT_FILE_DIR = CMakeFiles/rover_receiver.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/rover_receiver.dir/
-  TARGET_PDB = rover_receiver.pdb
 
 
 # =============================================================================
@@ -163,9 +148,8 @@ build rover_receiver: CXX_EXECUTABLE_LINKER__rover_receiver_Release CMakeFiles/r
   OBJECT_DIR = CMakeFiles/rover_receiver.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/rover_receiver.dir/
   TARGET_FILE = rover_receiver
-  TARGET_PDB = rover_receiver.pdb
+  TARGET_PDB = rover_receiver.dbg
 
 
 #############################################
@@ -225,8 +209,6 @@ build imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.o: CXX_COMPILER__imgui_unscanned
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/opt/homebrew/include
   OBJECT_DIR = imgui/CMakeFiles/imgui.dir
   OBJECT_FILE_DIR = imgui/CMakeFiles/imgui.dir
-  TARGET_COMPILE_PDB = imgui/CMakeFiles/imgui.dir/imgui.pdb
-  TARGET_PDB = imgui/libimgui.pdb
 
 build imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.o: CXX_COMPILER__imgui_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/imgui/imgui_draw.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Release
@@ -235,8 +217,6 @@ build imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.o: CXX_COMPILER__imgui_unscanned
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/opt/homebrew/include
   OBJECT_DIR = imgui/CMakeFiles/imgui.dir
   OBJECT_FILE_DIR = imgui/CMakeFiles/imgui.dir
-  TARGET_COMPILE_PDB = imgui/CMakeFiles/imgui.dir/imgui.pdb
-  TARGET_PDB = imgui/libimgui.pdb
 
 build imgui/CMakeFiles/imgui.dir/imgui_tables.cpp.o: CXX_COMPILER__imgui_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/imgui/imgui_tables.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Release
@@ -245,8 +225,6 @@ build imgui/CMakeFiles/imgui.dir/imgui_tables.cpp.o: CXX_COMPILER__imgui_unscann
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/opt/homebrew/include
   OBJECT_DIR = imgui/CMakeFiles/imgui.dir
   OBJECT_FILE_DIR = imgui/CMakeFiles/imgui.dir
-  TARGET_COMPILE_PDB = imgui/CMakeFiles/imgui.dir/imgui.pdb
-  TARGET_PDB = imgui/libimgui.pdb
 
 build imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.o: CXX_COMPILER__imgui_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Release
@@ -255,8 +233,6 @@ build imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.o: CXX_COMPILER__imgui_unscan
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/opt/homebrew/include
   OBJECT_DIR = imgui/CMakeFiles/imgui.dir
   OBJECT_FILE_DIR = imgui/CMakeFiles/imgui.dir
-  TARGET_COMPILE_PDB = imgui/CMakeFiles/imgui.dir/imgui.pdb
-  TARGET_PDB = imgui/libimgui.pdb
 
 build imgui/CMakeFiles/imgui.dir/imgui.cpp.o: CXX_COMPILER__imgui_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/imgui/imgui.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Release
@@ -265,8 +241,6 @@ build imgui/CMakeFiles/imgui.dir/imgui.cpp.o: CXX_COMPILER__imgui_unscanned_Rele
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/opt/homebrew/include
   OBJECT_DIR = imgui/CMakeFiles/imgui.dir
   OBJECT_FILE_DIR = imgui/CMakeFiles/imgui.dir
-  TARGET_COMPILE_PDB = imgui/CMakeFiles/imgui.dir/imgui.pdb
-  TARGET_PDB = imgui/libimgui.pdb
 
 build imgui/CMakeFiles/imgui.dir/backends/imgui_impl_opengl3.cpp.o: CXX_COMPILER__imgui_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/imgui/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Release
@@ -275,8 +249,6 @@ build imgui/CMakeFiles/imgui.dir/backends/imgui_impl_opengl3.cpp.o: CXX_COMPILER
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/opt/homebrew/include
   OBJECT_DIR = imgui/CMakeFiles/imgui.dir
   OBJECT_FILE_DIR = imgui/CMakeFiles/imgui.dir/backends
-  TARGET_COMPILE_PDB = imgui/CMakeFiles/imgui.dir/imgui.pdb
-  TARGET_PDB = imgui/libimgui.pdb
 
 build imgui/CMakeFiles/imgui.dir/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__imgui_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_imgui
   CONFIG = Release
@@ -285,8 +257,6 @@ build imgui/CMakeFiles/imgui.dir/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__i
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/imgui -I/Users/admin/rover/rover_wifi/rover_receiver/imgui/backends -I/opt/homebrew/include
   OBJECT_DIR = imgui/CMakeFiles/imgui.dir
   OBJECT_FILE_DIR = imgui/CMakeFiles/imgui.dir/backends
-  TARGET_COMPILE_PDB = imgui/CMakeFiles/imgui.dir/imgui.pdb
-  TARGET_PDB = imgui/libimgui.pdb
 
 
 # =============================================================================
@@ -303,9 +273,8 @@ build imgui/libimgui.a: CXX_STATIC_LIBRARY_LINKER__imgui_Release imgui/CMakeFile
   OBJECT_DIR = imgui/CMakeFiles/imgui.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = imgui/CMakeFiles/imgui.dir/imgui.pdb
   TARGET_FILE = imgui/libimgui.a
-  TARGET_PDB = imgui/libimgui.pdb
+  TARGET_PDB = imgui.a.dbg
 
 
 #############################################
@@ -352,8 +321,6 @@ build implot/CMakeFiles/implot.dir/implot_demo.cpp.o: CXX_COMPILER__implot_unsca
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/implot -I/Users/admin/rover/rover_wifi/rover_receiver/implot/../imgui -I/opt/homebrew/include
   OBJECT_DIR = implot/CMakeFiles/implot.dir
   OBJECT_FILE_DIR = implot/CMakeFiles/implot.dir
-  TARGET_COMPILE_PDB = implot/CMakeFiles/implot.dir/implot.pdb
-  TARGET_PDB = implot/libimplot.pdb
 
 build implot/CMakeFiles/implot.dir/implot_items.cpp.o: CXX_COMPILER__implot_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/implot/implot_items.cpp || cmake_object_order_depends_target_implot
   CONFIG = Release
@@ -362,8 +329,6 @@ build implot/CMakeFiles/implot.dir/implot_items.cpp.o: CXX_COMPILER__implot_unsc
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/implot -I/Users/admin/rover/rover_wifi/rover_receiver/implot/../imgui -I/opt/homebrew/include
   OBJECT_DIR = implot/CMakeFiles/implot.dir
   OBJECT_FILE_DIR = implot/CMakeFiles/implot.dir
-  TARGET_COMPILE_PDB = implot/CMakeFiles/implot.dir/implot.pdb
-  TARGET_PDB = implot/libimplot.pdb
 
 build implot/CMakeFiles/implot.dir/implot.cpp.o: CXX_COMPILER__implot_unscanned_Release /Users/admin/rover/rover_wifi/rover_receiver/implot/implot.cpp || cmake_object_order_depends_target_implot
   CONFIG = Release
@@ -372,8 +337,6 @@ build implot/CMakeFiles/implot.dir/implot.cpp.o: CXX_COMPILER__implot_unscanned_
   INCLUDES = -I/Users/admin/rover/rover_wifi/rover_receiver/implot -I/Users/admin/rover/rover_wifi/rover_receiver/implot/../imgui -I/opt/homebrew/include
   OBJECT_DIR = implot/CMakeFiles/implot.dir
   OBJECT_FILE_DIR = implot/CMakeFiles/implot.dir
-  TARGET_COMPILE_PDB = implot/CMakeFiles/implot.dir/implot.pdb
-  TARGET_PDB = implot/libimplot.pdb
 
 
 # =============================================================================
@@ -390,9 +353,8 @@ build implot/libimplot.a: CXX_STATIC_LIBRARY_LINKER__implot_Release implot/CMake
   OBJECT_DIR = implot/CMakeFiles/implot.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = implot/CMakeFiles/implot.dir/implot.pdb
   TARGET_FILE = implot/libimplot.a
-  TARGET_PDB = implot/libimplot.pdb
+  TARGET_PDB = implot.a.dbg
 
 
 #############################################
@@ -462,14 +424,14 @@ build implot/all: phony implot/libimplot.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /Users/admin/rover/rover_wifi/rover_receiver/build-release/cmake_install.cmake /Users/admin/rover/rover_wifi/rover_receiver/build-release/imgui/cmake_install.cmake /Users/admin/rover/rover_wifi/rover_receiver/build-release/implot/cmake_install.cmake: RERUN_CMAKE | /Users/admin/rover/rover_wifi/rover_receiver/CMakeLists.txt /Users/admin/rover/rover_wifi/rover_receiver/imgui/CMakeLists.txt /Users/admin/rover/rover_wifi/rover_receiver/implot/CMakeLists.txt /opt/homebrew/lib/cmake/glfw3/glfw3Config.cmake /opt/homebrew/lib/cmake/glfw3/glfw3ConfigVersion.cmake /opt/homebrew/lib/cmake/glfw3/glfw3Targets-release.cmake /opt/homebrew/lib/cmake/glfw3/glfw3Targets.cmake /opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeNinjaFindMake.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindThreads.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.1.2/CMakeCCompiler.cmake CMakeFiles/4.1.2/CMakeCXXCompiler.cmake CMakeFiles/4.1.2/CMakeSystem.cmake
+build build.ninja /Users/admin/rover/rover_wifi/rover_receiver/build-release/cmake_install.cmake /Users/admin/rover/rover_wifi/rover_receiver/build-release/imgui/cmake_install.cmake /Users/admin/rover/rover_wifi/rover_receiver/build-release/implot/cmake_install.cmake: RERUN_CMAKE | /Users/admin/rover/rover_wifi/rover_receiver/CMakeLists.txt /Users/admin/rover/rover_wifi/rover_receiver/imgui/CMakeLists.txt /Users/admin/rover/rover_wifi/rover_receiver/implot/CMakeLists.txt /opt/homebrew/lib/cmake/glfw3/glfw3Config.cmake /opt/homebrew/lib/cmake/glfw3/glfw3ConfigVersion.cmake /opt/homebrew/lib/cmake/glfw3/glfw3Targets-release.cmake /opt/homebrew/lib/cmake/glfw3/glfw3Targets.cmake /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindThreads.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.1.2/CMakeCCompiler.cmake CMakeFiles/4.1.2/CMakeCXXCompiler.cmake CMakeFiles/4.1.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/admin/rover/rover_wifi/rover_receiver/CMakeLists.txt /Users/admin/rover/rover_wifi/rover_receiver/imgui/CMakeLists.txt /Users/admin/rover/rover_wifi/rover_receiver/implot/CMakeLists.txt /opt/homebrew/lib/cmake/glfw3/glfw3Config.cmake /opt/homebrew/lib/cmake/glfw3/glfw3ConfigVersion.cmake /opt/homebrew/lib/cmake/glfw3/glfw3Targets-release.cmake /opt/homebrew/lib/cmake/glfw3/glfw3Targets.cmake /opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeNinjaFindMake.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindThreads.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.1.2/CMakeCCompiler.cmake CMakeFiles/4.1.2/CMakeCXXCompiler.cmake CMakeFiles/4.1.2/CMakeSystem.cmake: phony
+build /Users/admin/rover/rover_wifi/rover_receiver/CMakeLists.txt /Users/admin/rover/rover_wifi/rover_receiver/imgui/CMakeLists.txt /Users/admin/rover/rover_wifi/rover_receiver/implot/CMakeLists.txt /opt/homebrew/lib/cmake/glfw3/glfw3Config.cmake /opt/homebrew/lib/cmake/glfw3/glfw3ConfigVersion.cmake /opt/homebrew/lib/cmake/glfw3/glfw3Targets-release.cmake /opt/homebrew/lib/cmake/glfw3/glfw3Targets.cmake /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindThreads.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.1.2/CMakeCCompiler.cmake CMakeFiles/4.1.2/CMakeCXXCompiler.cmake CMakeFiles/4.1.2/CMakeSystem.cmake: phony
 
 
 #############################################

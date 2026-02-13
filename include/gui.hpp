@@ -9,6 +9,7 @@
 #include "graph.hpp"
 #include "log.hpp"
 #include "lidar_drawer.hpp"
+#include "parser.hpp"
 
 const unsigned int WIN_WIDTH = 800;
 const unsigned int WIN_HEIGHT = 750;

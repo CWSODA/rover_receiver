@@ -90,7 +90,8 @@ void LidarDrawer::render(GUIData& gui_data) {
         dot_shader.set_vec3("a_color", point_color);
         glDrawArrays(GL_POINTS, 0, 1);
 
-        point.lifetime -= gui_data.delta_time;
+        // reduce lifetime if not in snapshot mode
+        if (!is_snapshot) point.lifetime -= gui_data.delta_time;
     }
 
     // erase points with expired lifetimes

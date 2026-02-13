@@ -52,6 +52,7 @@ struct LidarPoint {
 class LidarDrawer {
    public:
     int strength_threshold = 0;  // must be within one byte
+    bool is_snapshot = false;    // set true to disable decay and intake
     LidarDrawer();
 
     // render loop
@@ -74,6 +75,7 @@ class LidarDrawer {
     void add_point(uint8_t strength, float distance, float angle,
                    float lifetime = LIFETIME_SECONDS) {
         ++this->sample_count;
+        if (is_snapshot) return;
         if (strength < strength_threshold) return;  // ignore weak signals
         points.emplace_back(LidarPoint(strength, distance, angle, lifetime));
     }
