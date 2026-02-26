@@ -3,6 +3,17 @@ A real-time OpenGL-based GUI debugging tool for visualising rover sensor data ov
 Designed to accept connection with C232HM cable but any UART cable should work. \
 Requires compatile Pico microcontroller flashed with program from https://github.com/CWSODA/rover_w 
 
+<table>
+  <tr>
+    <td><img alt="GUI screenshot (main)" src="https://github.com/CWSODA/rover_receiver/blob/main/screenshots/rover_gui_main.png" width="100%"/>
+      <p>Screenshot of GUI main page</p>
+    </td>
+    <td><img alt="GUI screenshot (log)" src="https://github.com/CWSODA/rover_receiver/blob/main/screenshots/rover_gui_log.png" width="100%"/>
+      <p>Screenshot of GUI log page</p>
+    </td>
+  </tr>
+</table>
+
 # OS Notes
 The program was developed on Apple Silicon and not tested on other operating systems. \
 UART baudrate needs to be set higher than 115,200 (currently only implemented for macOS). 
