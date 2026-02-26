@@ -45,7 +45,7 @@ void run_gui() {
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
     GLFWwindow* window =
-        glfwCreateWindow(WIN_WIDTH, WIN_HEIGHT, "DAC", NULL, NULL);
+        glfwCreateWindow(WIN_WIDTH, WIN_HEIGHT, "ROVER DEBUGGER", NULL, NULL);
     if (!window) {
         const char* description;
         int code = glfwGetError(&description);
