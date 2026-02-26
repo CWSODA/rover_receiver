@@ -1,3 +1,6 @@
+# EXPERIMENT BRANCH
+This version was used for the individual experiment that tested the rotation speed and angular resolution of the LiDAR module. All settings have been preserved for reproducibility. This branch will NOT be updated.
+
 # Brief
 A real-time OpenGL-based GUI debugging tool for visualising rover sensor data over UART. \
 Designed to accept connection with C232HM cable but any UART cable should work. \
