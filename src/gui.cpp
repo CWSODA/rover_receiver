@@ -30,9 +30,10 @@
 
 #define TODO throw std::invalid_argument("TODO!");
 
-#define DIRECT_CONNECTION true
+#define DIRECT_CONNECTION false
 
 const std::string default_port_name = "/dev/tty.usbserial-FTU7C2WR";
+const float DATA_CD = 5.0f;
 
 void run_gui() {
     if (!glfwInit()) throw std::runtime_error("Unable to start glfw!");
@@ -106,7 +107,7 @@ void run_gui() {
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-#ifdef DIRECT_CONNECTION
+#if DIRECT_CONNECTION
         for (char byte : gui_data.sp.pull_buffer()) {
             // gui_data.gui_log.log_byte_hex(byte);
             lidar_parser.parse_byte(byte, gui_data.lidar_drawer);
@@ -117,6 +118,29 @@ void run_gui() {
 
         // render the lidar points
         gui_data.lidar_drawer.render(gui_data);
+
+        // calculate test data, time averaged by 1 sec
+        // points per second and frames per second
+        static float data_cd = 0.0f;
+        static float pps = 0.0f;
+        static float fps = 0.0f;
+        static uint64_t last_sample_count = 0;
+        static uint64_t last_frame_count = 0;
+        data_cd += gui_data.delta_time;
+        if (data_cd >= DATA_CD) {
+            uint64_t cur_sample_count =
+                gui_data.lidar_drawer.get_sample_count();
+            pps = static_cast<float>(cur_sample_count - last_sample_count) /
+                  data_cd;
+            last_sample_count = cur_sample_count;
+
+            uint64_t cur_frame_count = gui_data.frame_count;
+            fps = static_cast<float>(cur_frame_count - last_frame_count) /
+                  data_cd;
+            last_frame_count = cur_frame_count;
+
+            data_cd = 0.0f;  // reset cooldown
+        }
 
         // IMGUI STUFF
         // new IMGUI frame
@@ -148,36 +172,14 @@ void run_gui() {
                                  &gui_data.lidar_drawer.strength_threshold, 0,
                                  255, "%d", ImGuiSliderFlags_AlwaysClamp);
 
-                // calculate test data, time averaged by 1 sec
-                // points per second and frames per second
-                static float data_cd = 0.0f;
-                static float pps = 0.0f;
-                static float fps = 0.0f;
-                static uint64_t last_sample_count = 0;
-                static uint64_t last_frame_count = 0;
-                data_cd += gui_data.delta_time;
-                if (data_cd >= 1.0f) {
-                    uint64_t cur_sample_count =
-                        gui_data.lidar_drawer.get_sample_count();
-                    pps = static_cast<float>(cur_sample_count -
-                                             last_sample_count) /
-                          data_cd;
-                    last_sample_count = cur_sample_count;
-
-                    uint64_t cur_frame_count = gui_data.frame_count;
-                    fps =
-                        static_cast<float>(cur_frame_count - last_frame_count) /
-                        data_cd;
-                    last_frame_count = cur_frame_count;
-
-                    data_cd = 0.0f;  // reset cooldown
-                }
-
                 // DEBUG RATES
                 ImGui::Text("Points per sec: %f", pps);
                 float fps_offset = ImGui::GetItemRectSize().x + 100;
                 ImGui::SameLine(fps_offset);
                 ImGui::Text("Frames per sec: %f", fps);
+
+                ImGui::Text("Max Front Distance: %f m",
+                            gui_data.lidar_drawer.front_distance);
 
                 ImGui::Checkbox("Snapshot", &gui_data.lidar_drawer.is_snapshot);
 

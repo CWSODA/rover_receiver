@@ -7,8 +7,8 @@ using namespace boost;
 #include <mutex>
 #include <thread>
 
-// constexpr uint UART_BAUDRATE = 115200 * 8;
-constexpr unsigned long UART_BAUDRATE = 115200;
+constexpr uint UART_BAUDRATE = 115200 * 8;
+// constexpr unsigned long UART_BAUDRATE = 115200;
 
 class SerialPort {
    public:

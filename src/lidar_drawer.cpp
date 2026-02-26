@@ -56,6 +56,11 @@ LidarDrawer::LidarDrawer() {
     glEnableVertexAttribArray(0);
 
     glBindVertexArray(0);
+
+    // add test points
+    // add_point(255, 1.0f, 0.0f, 1E10);
+    // add_point(255, 2.0f, 0.0f, 1E10);
+    // add_point(255, 3.0f, 0.0f, 1E10);
 }
 
 void LidarDrawer::render(GUIData& gui_data) {
@@ -83,6 +88,7 @@ void LidarDrawer::render(GUIData& gui_data) {
     dot_shader.set_float("a_zoom", gui_data.drawer_zoom);
 
     // render points
+    front_distance = 0.0f;
     for (auto& point : points) {
         glm::vec3 original_color =
             glm::mix(glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f),
@@ -95,6 +101,8 @@ void LidarDrawer::render(GUIData& gui_data) {
 
         // reduce lifetime if not in snapshot mode
         if (!is_snapshot) point.lifetime -= gui_data.delta_time;
+
+        front_distance = std::max(front_distance, -point.pos.y);
     }
 
     // erase points with expired lifetimes

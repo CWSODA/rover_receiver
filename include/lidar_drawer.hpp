@@ -33,7 +33,7 @@ struct GUIData;
 struct LidarPoint {
     uint8_t strength;
     glm::vec2 pos;
-    float point_angle;
+    float point_angle;  // for color :)
 
     // dictates point opacity and deletion
     float lifetime;
@@ -56,7 +56,8 @@ class LidarDrawer {
    public:
     int strength_threshold = 0;  // must be within one byte
     float distance_threshold = 12.0f;
-    bool is_snapshot = false;  // set true to disable decay and intake
+    bool is_snapshot = false;     // set true to disable decay and intake
+    float front_distance = 0.0f;  // max dist in front
     LidarDrawer();
 
     // render loop
